@@ -1,10 +1,15 @@
 import { request, gql } from 'graphql-request';
-import { Dictionary, WordClass } from './gql/graphql.js';
+import {
+  Dictionary,
+  ExampleQuery,
+  ExampleQueryVariables,
+  WordClass,
+} from './gql/graphql.js';
 import { readLine, selectItem } from './cli-util.js';
 
 const url = 'https://api.ordbokapi.org/graphql';
 const document = gql`
-  query ExampleQuery(
+  query Example(
     $word: String!
     $dictionaries: [Dictionary!]
     $wordClass: WordClass
@@ -55,11 +60,15 @@ console.log();
 
 // senda førespurnad til API
 try {
-  const data = await request(url, document, {
-    word,
-    dictionaries: dictionaries ? [dictionaries] : undefined,
-    wordClass,
-  });
+  const data = await request<ExampleQuery, ExampleQueryVariables>(
+    url,
+    document,
+    {
+      word,
+      dictionaries: dictionaries ? [dictionaries] : undefined,
+      wordClass,
+    },
+  );
 
   console.dir(data, { depth: null });
 } catch (error) {
