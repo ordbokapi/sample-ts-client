@@ -3751,9 +3751,6 @@ __metadata:
     graphql-request: "npm:^6.1.0"
     prettier: "npm:^3.2.5"
     typescript: "npm:^5.3.3"
-  dependenciesMeta:
-    binary-install@1.1.0:
-      unplugged: true
   languageName: unknown
   linkType: soft
 
