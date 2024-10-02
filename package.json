@@ -1,7 +1,7 @@
 {
   "name": "ordbokapi-sample-ts-client",
   "private": true,
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.5.0",
   "scripts": {
     "start": "node dist/main.js",
     "start:dev": "yarn build && yarn start",
@@ -19,7 +19,7 @@
   },
   "volta": {
     "node": "21.6.2",
-    "yarn": "4.1.0"
+    "yarn": "4.5.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.2",
