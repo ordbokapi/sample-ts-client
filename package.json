@@ -18,7 +18,7 @@
     "typescript": "^5.3.3"
   },
   "volta": {
-    "node": "21.7.3",
+    "node": "24.19.0",
     "yarn": "4.5.0"
   },
   "devDependencies": {
@@ -26,6 +26,6 @@
     "@graphql-codegen/client-preset": "4.3.3",
     "@parcel/watcher": "^2.4.1",
     "@types/graphql": "^14.5.0",
-    "@types/node": "^20.11.20"
+    "@types/node": "^24.0.0"
   }
 }
